@@ -14,6 +14,13 @@
         <br><br>
         Last name: <form:input path="lastName"/>
         <br><br>
+        <form:select path="country">
+            <form:options items="${countryOptions}" />
+        </form:select>
+        <br><br>
+        Choose faverite language:
+        <br>
+        <form:radiobuttons path="favLang" items="${favoriteLanguages}"/>
         <input type="submit" value="Submit"/>
     </form:form>
 </body>
