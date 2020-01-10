@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>Hello world</h1>
-    <h2>${param.studentname}</h2>
+    <h2>Student name: ${param.studentname}</h2>
+    <h2>The message: ${message}</h2>
+    <img src="${pageContext.request.contextPath}/resources/images/tomcat.jpeg">
 </body>
 </html>
