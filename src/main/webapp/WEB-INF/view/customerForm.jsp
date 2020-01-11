@@ -18,6 +18,9 @@
         Last name (*): <form:input path="lastName"/>
         <form:errors path="lastName" cssClass="error"/>
         <br><br>
+        Number of passes: <form:input path="passNum"/>
+        <form:errors path="passNum" cssClass="error"/>
+        <br><br>
         <input type="submit" value="Submit">
     </form:form>
     

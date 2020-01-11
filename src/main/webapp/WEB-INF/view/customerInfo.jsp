@@ -10,6 +10,8 @@
 </head>
 <body>
     Customer name: ${theCustomer.firstName} ${theCustomer.lastName}
+    <br><br>
+    Number of passes: ${theCustomer.passNum}
     
 </body>
 </html>
