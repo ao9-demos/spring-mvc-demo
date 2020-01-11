@@ -20,8 +20,6 @@
 	<!-- Step 4: Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
 	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
-	<util:properties  id="countryOptions" location="classpath:../countryOptions.properties" />
-	<util:properties  id="favoriteLanguages" location="classpath:../favoriteLanguages.properties" />
 	
 	<!-- Step 5: Define Spring MVC view resolver -->
 	<bean
