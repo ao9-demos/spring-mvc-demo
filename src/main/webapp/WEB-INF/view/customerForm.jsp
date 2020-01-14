@@ -18,8 +18,14 @@
         Last name (*): <form:input path="lastName"/>
         <form:errors path="lastName" cssClass="error"/>
         <br><br>
-        Number of passes: <form:input path="passNum"/>
+        Pass numbers: <form:input path="passNum"/>
         <form:errors path="passNum" cssClass="error"/>
+        <br><br>
+        Post code: <form:input path="post"/>
+        <form:errors path="post" cssClass="error"/>
+        <br><br>
+        Course code: <form:input path="courseCode"/>
+        <form:errors path="courseCode" cssClass="error"/>
         <br><br>
         <input type="submit" value="Submit">
     </form:form>

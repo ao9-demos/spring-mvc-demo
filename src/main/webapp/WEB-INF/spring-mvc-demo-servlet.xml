@@ -27,6 +27,11 @@
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    <property name="basename" value="classpath*:resourcebundles/messages" />
+    <property name="useCodeAsDefaultMessage" value="true" />
+</bean>
 
 </beans>
 

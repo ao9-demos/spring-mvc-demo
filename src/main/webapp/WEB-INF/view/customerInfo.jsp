@@ -12,6 +12,9 @@
     Customer name: ${theCustomer.firstName} ${theCustomer.lastName}
     <br><br>
     Number of passes: ${theCustomer.passNum}
-    
+    <br><br>
+    Post code: ${theCustomer.post}
+    <br><br>
+    Course code: ${theCustomer.courseCode}
 </body>
 </html>

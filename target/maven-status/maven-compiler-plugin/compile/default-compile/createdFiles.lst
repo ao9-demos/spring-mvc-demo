@@ -1,3 +1,6 @@
+io/ao9/springmvcdemo/mvc/validation/CourseCode.class
+io/ao9/jdbc/TestJDBC.class
 io/ao9/springmvcdemo/mvc/CustomerController.class
+io/ao9/springmvcdemo/mvc/validation/CourseCodeConstraintValidator.class
 io/ao9/springmvcdemo/mvc/HomeController.class
 io/ao9/springmvcdemo/mvc/Customer.class
