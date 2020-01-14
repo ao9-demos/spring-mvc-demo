@@ -1,6 +1,8 @@
+io/ao9/hibernatedemo/ReadStudent.class
 io/ao9/springmvcdemo/mvc/validation/CourseCode.class
 io/ao9/jdbc/TestJDBC.class
 io/ao9/hibernatedemo/entity/Student.class
+io/ao9/hibernatedemo/PrimaryKeyDemo.class
 io/ao9/springmvcdemo/mvc/CustomerController.class
 io/ao9/springmvcdemo/mvc/validation/CourseCodeConstraintValidator.class
 io/ao9/springmvcdemo/mvc/HomeController.class
