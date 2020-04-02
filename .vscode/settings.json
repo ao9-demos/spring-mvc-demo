@@ -1,3 +1,14 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sqltools.connections": [
+        {
+            "database": "hb_student_tracker",
+            "dialect": "MySQL",
+            "name": "gcp-spring",
+            "password": "hbstudent",
+            "port": 3306,
+            "server": "34.74.126.132",
+            "username": "hbstudent"
+        }
+    ]
 }

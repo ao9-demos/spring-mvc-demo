@@ -9,7 +9,7 @@ import io.ao9.hibernatedemo.entity.Student;
 public class PrimaryKeyDemo{
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
-                                    .configure("hibernate.cfg.xml")
+                                    .configure("hibernateStudent.cfg.xml")
                                     .addAnnotatedClass(Student.class)
                                     .buildSessionFactory();
         
