@@ -7,7 +7,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import io.ao9.hibernatedemo.entity.Employee;
-import io.ao9.hibernatedemo.entity.Student;
 
 public class EmployeePractices {
     public static void main(String[] args) {

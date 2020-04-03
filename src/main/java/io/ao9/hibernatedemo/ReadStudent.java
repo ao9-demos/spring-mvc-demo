@@ -18,7 +18,7 @@ public class ReadStudent{
             Session session = factory.getCurrentSession();
             
             System.out.println("creating a new student");
-            Student theStudent = new Student("Waffle","Dog","wd@123.com");
+            Student theStudent = new Student("Waffle","Dog",DateUtils.parseDate("31/02/1988"), "wd@123.com");
 
             System.out.println("beginning transaction");
             session.beginTransaction();

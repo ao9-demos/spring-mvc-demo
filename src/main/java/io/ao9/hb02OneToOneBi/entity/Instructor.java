@@ -1,49 +1,42 @@
-package io.ao9.hibernatedemo.entity;
+package io.ao9.hb02OneToOneBi.entity;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import io.ao9.hibernatedemo.DateUtils;
-
 import javax.persistence.Id;
-
-import java.util.Date;
-
-import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "student")
-public class Student{
+@Table(name = "instructor")
+public class Instructor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    
+
     @Column(name = "first_name")
     private String firstName;
-    
+
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "date_of_birth")
-    @Temporal(TemporalType.DATE)
-    private Date dateOfBirth;
-
     @Column(name = "email")
     private String email;
-    
-    public Student(){
-        
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "instructor_detail_id")
+    private InstructorDetail instructorDetail;    
+
+    public Instructor() {
     }
 
-    public Student(String firstName, String lastName, Date dateOfBirth, String email) {
+    public Instructor(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
         this.email = email;
     }
 
@@ -71,14 +64,6 @@ public class Student{
         this.lastName = lastName;
     }
 
-    public Date getDateOfBirth() {
-        return this.dateOfBirth;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public String getEmail() {
         return this.email;
     }
@@ -87,14 +72,22 @@ public class Student{
         this.email = email;
     }
 
+    public InstructorDetail getInstructorDetail() {
+        return this.instructorDetail;
+    }
+
+    public void setInstructorDetail(InstructorDetail instructorDetail) {
+        this.instructorDetail = instructorDetail;
+    }
+
     @Override
     public String toString() {
         return "{" +
             " id='" + getId() + "'" +
             ", firstName='" + getFirstName() + "'" +
             ", lastName='" + getLastName() + "'" +
-            ", dateOfBirth='" + DateUtils.formatDate(getDateOfBirth()) + "'" +
             ", email='" + getEmail() + "'" +
+            ", instructorDetail='" + getInstructorDetail() + "'" +
             "}";
     }
 }

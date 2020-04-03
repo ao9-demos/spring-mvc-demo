@@ -17,9 +17,9 @@ public class PrimaryKeyDemo{
 
         try {
             System.out.println("Creating 3 new student3");
-            Student theStudent1 = new Student("Jim","Apple","ja@123.com");
-            Student theStudent2 = new Student("Dug","Tree","dt@123.com");
-            Student theStudent3 = new Student("Ace","Butter","ab@123.com");
+            Student theStudent1 = new Student("Jim","Apple",DateUtils.parseDate("01/12/1998"), "ja@123.com");
+            Student theStudent2 = new Student("Dug","Tree",DateUtils.parseDate("31/12/1988"), "dt@123.com");
+            Student theStudent3 = new Student("Ace","Butter",DateUtils.parseDate("31/12/1990"), "ab@123.com");
 
             System.out.println("begin transaction");
             session.beginTransaction();
