@@ -18,7 +18,7 @@ public class Course {
     @Column(name = "id")
     private int id;
     
-    @Column(name = "titile")
+    @Column(name = "title")
     private String title;
 
     @ManyToOne(cascade = {CascadeType.DETACH,
@@ -64,7 +64,7 @@ public class Course {
         return "{" +
             " id='" + getId() + "'" +
             ", title='" + getTitle() + "'" +
-            ", instructor='" + getInstructor() + "'" +
+            ", instructor='" + getInstructor().getFirstName() + "'" +
             "}";
     }
 }

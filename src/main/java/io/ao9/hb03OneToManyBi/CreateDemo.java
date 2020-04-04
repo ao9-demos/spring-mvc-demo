@@ -14,6 +14,7 @@ public class CreateDemo {
                                     .configure("hb-03-one-to-many-bi.cfg.xml")
                                     .addAnnotatedClass(Instructor.class)
                                     .addAnnotatedClass(InstructorDetail.class)
+                                    .addAnnotatedClass(Course.class)
                                     .buildSessionFactory();
 
         Session session = factory.getCurrentSession();
@@ -32,6 +33,9 @@ public class CreateDemo {
             System.out.println("create and add courses");
             Course tempCourese = new Course("math");
             tempInstructor.add(tempCourese);
+
+            System.out.println("save course");
+            session.save(tempCourese);
 
             System.out.println("save instructor");
             session.save(tempInstructor);
