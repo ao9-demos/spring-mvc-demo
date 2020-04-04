@@ -10,7 +10,7 @@ import io.ao9.hb05ManyToMany.entity.InstructorDetail;
 import io.ao9.hb05ManyToMany.entity.Review;
 import io.ao9.hb05ManyToMany.entity.Student;
 
-public class DeleteDemo {
+public class CreateStudentDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                                     .configure("hb-05-many-to-many.cfg.xml")
@@ -27,25 +27,31 @@ public class DeleteDemo {
             System.out.println("begin transaction");
             session.beginTransaction();
 
-            System.out.println("get course");
-            int id = 11;
+            System.out.println("create students");
+            Student tempStudent1 = new Student("jhon", "doe", "jd@123.com");
+            Student tempStudent2 = new Student("ace", "arm", "aa@123.com");
+            Student tempStudent3 = new Student("fancy", "card", "fc@123.com");
+
+            System.out.println("get course and add student");
+            int id = 10;
             Course tempCourese = session.get(Course.class, id);
+            tempCourese.addStudent(tempStudent1);
+            tempCourese.addStudent(tempStudent3);
 
-            System.out.println("delete course");
-            try {
-                session.delete(tempCourese);
-            } catch (Exception e) {
-            }
-
-            System.out.println("get student");
             id = 11;
-            Student tempStudent = session.get(Student.class, id);
+            tempCourese = session.get(Course.class, id);
+            tempCourese.addStudent(tempStudent2);
+            tempCourese.addStudent(tempStudent3);
 
-            System.out.println("delete course");
-            try {
-                session.delete(tempStudent);
-            } catch (Exception e) {
-            }
+            id = 12;
+            tempCourese = session.get(Course.class, id);
+            tempCourese.addStudent(tempStudent1);
+            tempCourese.addStudent(tempStudent2);
+
+            System.out.println("save students");
+            session.save(tempStudent1);
+            session.save(tempStudent2);
+            session.save(tempStudent3);
 
             System.out.println("commiting...");
             session.getTransaction().commit();

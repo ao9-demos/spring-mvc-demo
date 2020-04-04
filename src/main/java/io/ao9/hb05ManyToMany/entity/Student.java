@@ -1,5 +1,6 @@
 package io.ao9.hb05ManyToMany.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -50,6 +51,11 @@ public class Student{
         this.email = email;
     }
 
+    public void add(Course course){
+        if(courses == null) courses = new ArrayList<>();
+        courses.add(course);
+    }
+
     public int getId() {
         return this.id;
     }
@@ -80,6 +86,14 @@ public class Student{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Course> getCourses() {
+        return this.courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     @Override

@@ -56,9 +56,14 @@ public class Course {
         this.title = title;
     }
 
-    public void add(Review review){
+    public void addReview(Review review){
         if(reviews == null) reviews = new ArrayList<>();
         reviews.add(review);
+    }
+
+    public void addStudent(Student student){
+        if(students == null) students = new ArrayList<>();
+        students.add(student);
     }
 
     public int getId() {
@@ -94,12 +99,19 @@ public class Course {
         this.reviews = reviews;
     }
 
+    public List<Student> getStudents() {
+        return this.students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
     @Override
     public String toString() {
         return "{" +
             " id='" + getId() + "'" +
             ", title='" + getTitle() + "'" +
-            ", instructor='" + getInstructor().getLastName() + "'" +
             "}";
     }
     

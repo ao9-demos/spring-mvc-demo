@@ -13,7 +13,7 @@ import io.ao9.hb05ManyToMany.entity.Student;
 public class CreateCourseWithReviewDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
-                                    .configure("hb-04-one-to-many-uni.cfg.xml")
+                                    .configure("hb-05-many-to-many.cfg.xml")
                                     .addAnnotatedClass(Instructor.class)
                                     .addAnnotatedClass(InstructorDetail.class)
                                     .addAnnotatedClass(Course.class)
@@ -33,9 +33,9 @@ public class CreateCourseWithReviewDemo {
 
             System.out.println("create and add courses");
             Course tempCourese = new Course("python");
-            tempCourese.add(new Review("good course"));
-            tempCourese.add(new Review("alright"));
-            tempCourese.add(new Review("it's OK"));
+            tempCourese.addReview(new Review("good course"));
+            tempCourese.addReview(new Review("alright"));
+            tempCourese.addReview(new Review("it's OK"));
             tempInstructor.add(tempCourese);
 
             System.out.println("save course");
@@ -43,9 +43,9 @@ public class CreateCourseWithReviewDemo {
 
             System.out.println("create and add courses");
             tempCourese = new Course("java");
-            tempCourese.add(new Review("good course"));
-            tempCourese.add(new Review("alright"));
-            tempCourese.add(new Review("it's OK"));
+            tempCourese.addReview(new Review("good course"));
+            tempCourese.addReview(new Review("alright"));
+            tempCourese.addReview(new Review("it's OK"));
             tempInstructor.add(tempCourese);
 
             System.out.println("save course");
@@ -53,9 +53,9 @@ public class CreateCourseWithReviewDemo {
 
             System.out.println("create and add courses");
             tempCourese = new Course("game");
-            tempCourese.add(new Review("good course"));
-            tempCourese.add(new Review("alright"));
-            tempCourese.add(new Review("it's OK"));
+            tempCourese.addReview(new Review("good course"));
+            tempCourese.addReview(new Review("alright"));
+            tempCourese.addReview(new Review("it's OK"));
             tempInstructor.add(tempCourese);
 
             System.out.println("save course");

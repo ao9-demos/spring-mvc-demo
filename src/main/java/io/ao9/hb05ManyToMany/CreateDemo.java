@@ -13,7 +13,7 @@ import io.ao9.hb05ManyToMany.entity.Student;
 public class CreateDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
-                                    .configure("hb-04-one-to-many-uni.cfg.xml")
+                                    .configure("hb-05-many-to-many.cfg.xml")
                                     .addAnnotatedClass(Instructor.class)
                                     .addAnnotatedClass(InstructorDetail.class)
                                     .addAnnotatedClass(Course.class)

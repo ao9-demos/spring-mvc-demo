@@ -13,7 +13,7 @@ import io.ao9.hb05ManyToMany.entity.Student;
 public class ReadDemo {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
-                                    .configure("hb-04-one-to-many-uni.cfg.xml")
+                                    .configure("hb-05-many-to-many.cfg.xml")
                                     .addAnnotatedClass(Instructor.class)
                                     .addAnnotatedClass(InstructorDetail.class)
                                     .addAnnotatedClass(Course.class)
@@ -27,12 +27,19 @@ public class ReadDemo {
             System.out.println("begin transaction");
             session.beginTransaction();
 
-            System.out.println("get course");
+            System.out.println("\nget course\n");
             int id = 10;
             Course tempCourse = session.get(Course.class, id);
             
             System.out.println(tempCourse);
-            System.out.println(tempCourse.getReviews());
+            System.out.println(tempCourse.getStudents());
+
+            System.out.println("\nget student\n");
+            id = 10;
+            Student tempStudent = session.get(Student.class, id);
+            
+            System.out.println(tempStudent);
+            System.out.println(tempStudent.getCourses());
             
 
             System.out.println("commiting...");
