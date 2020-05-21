@@ -8,7 +8,7 @@
 
         <!-- JDBC Database connection settings -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://34.74.126.132:3306/hb-02-one-to-one-bi?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hb-02-one-to-one-bi?useSSL=false&amp;serverTimezone=UTC</property>
         <property name="connection.username">springstudent</property>
         <property name="connection.password">springstudent</property>
 
